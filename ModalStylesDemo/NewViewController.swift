@@ -7,36 +7,44 @@
 //
 
 import UIKit
+import SnapKit
 
 class NewViewController: UIViewController {
-    @IBOutlet weak var doneButton: UIButton!
     
-    override func viewWillLayoutSubviews() {
-        // If we're presented modally with the .fullscreen UIModalPresentationStyle then we must
-        // display a dismiss button or the user will have no way to close this view controller.
-        // The "Done" button is visible by default
-        
-        if navigationController != nil {
-            // We don't need a dismiss button if we were pushed onto the nav stack,
-            // and therefore have a nav bar with back button
-            doneButton.isHidden = true
-        }
-    }
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Next222 Page", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = view.tintColor
+        button.layer.cornerRadius = 8
+        button.clipsToBounds = true
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        preferredContentSize = CGSize(width: view.frame.width, height: 300)
+        setupView()
+        setupConstraints()
+        registerButton.addTarget(self, action: #selector(pushViewControllerTapped), for: .touchUpInside)
     }
     
-    @IBAction func doneTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    func setupView() {
+        view.backgroundColor = .clear
     }
     
-    @IBAction func pushViewControllerTapped(_ sender: Any) {
-//        guard let nvc = storyboard?.instantiateViewController(withIdentifier: "SecondNewController") else { return }
-//        navigationController?.pushViewController(nvc, animated: true)
-//        performSegue(withIdentifier: "YourSegueIdentifier", sender: self)
-        guard let secondNewController = storyboard?.instantiateViewController(withIdentifier: "SecondNewController") else { return }
-        navigationController?.pushViewController(secondNewController, animated: true)
+    func setupConstraints() {
+        view.addSubview(registerButton)
+       
+        registerButton.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+        }
+    }
+    
+    
+    @objc func pushViewControllerTapped() {
+        let vc = SecondNewController()
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
+   

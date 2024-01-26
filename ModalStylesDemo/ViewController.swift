@@ -7,18 +7,10 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var modalPresentationStylePicker: UIPickerView!
-    
-    fileprivate var selectedPresentationStyle: UIModalPresentationStyle = .automatic
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        modalPresentationStylePicker.delegate = self
-        modalPresentationStylePicker.dataSource = self
-    }
+    //    fileprivate var selectedPresentationStyle: UIModalPresentationStyle = .automatic
     
     /*
      
@@ -54,44 +46,76 @@ class ViewController: UIViewController {
      
      */
     
-    @IBAction func pushViewControllerTapped(_ sender: Any) {
-        guard let nvc = storyboard?.instantiateViewController(withIdentifier: "NewViewController") else { return }
-        navigationController?.pushViewController(nvc, animated: true)
+    lazy var contentStackView: UIStackView = {
+        let spacer = UIView()
+        let stackView = UIStackView(arrangedSubviews: [registerButton])
+        stackView.axis = .vertical
+        stackView.spacing = 12.0
+        return stackView
+    }()
+    
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Next Page", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = view.tintColor
+        button.layer.cornerRadius = 8
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //        setupView()
+        setupConstraints()
+        view.backgroundColor = .white
+        registerButton.addTarget(self, action: #selector(presentModalController), for: .touchUpInside)
     }
     
-    @IBAction func presentViewControllerTapped(_ sender: Any) {
-        guard let nvc = storyboard?.instantiateViewController(withIdentifier: "NewViewController") else { return }
-        nvc.modalPresentationStyle = selectedPresentationStyle
+    func setupView() {
+        view.backgroundColor = .white
+    }
+    
+    func setupConstraints() {
+        view.addSubview(containerView)
+        containerView.addSubview(contentStackView)
+
         
-        nvc.transitioningDelegate = self
+        containerView.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview()
+            make.width.equalToSuperview().inset(32)
+        }
         
+        contentStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(16)  
+        }
         
-        let newNavigationController = UINavigationController(rootViewController: nvc)
+        registerButton.snp.makeConstraints { make in
+            make.top.bottom.leading.trailing.equalToSuperview().inset(50)
+        }
+        
+    }
+    
+    @objc func presentModalController() {
+        let vc = NewViewController()
+        
+        vc.transitioningDelegate = self
+        
+        let newNavigationController = UINavigationController(rootViewController: vc)
         newNavigationController.transitioningDelegate = self
         newNavigationController.modalPresentationStyle = .custom
         present(newNavigationController, animated: true, completion: nil)
         
     }
 }
-
-extension ViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return UIModalPresentationStyle.allCasesDescrption[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedPresentationStyle = UIModalPresentationStyle.allCases[row]
-    }
-}
-
-extension ViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int { 1 }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        UIModalPresentationStyle.allCases.count
-    }
-}
-
 
 
 extension ViewController: UIViewControllerTransitioningDelegate {
