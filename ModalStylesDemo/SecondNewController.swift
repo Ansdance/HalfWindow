@@ -3,7 +3,7 @@
 //  ModalStylesDemo
 //
 //  Created by ANSAR DAULETBAYEV on 26.01.2024.
-//  Copyright © 2024 Russell Archer. All rights reserved.
+//  Copyright © 2024 ANSAR DAULETBAYEV. All rights reserved.
 //
 
 import UIKit

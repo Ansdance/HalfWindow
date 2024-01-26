@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  ModalStylesDemo
 //
-//  Created by Russell Archer on 30/09/2019.
-//  Copyright © 2019 Russell Archer. All rights reserved.
+//  Created by ANSAR DAULETBAYEV on on 26.01.2024.
+//  Copyright © 2024 ANSAR DAULETBAYEV. All rights reserved.
 //
 
 import UIKit

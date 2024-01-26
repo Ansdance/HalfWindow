@@ -14,8 +14,8 @@
             filePath = "ModalStylesDemo/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "presentModalController()"
             landmarkType = "7">
             <Locations>
@@ -62,42 +62,10 @@
             filePath = "ModalStylesDemo/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "presentationController(forPresented:presenting:source:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6F774390-8DB7-42DC-8DCB-E43FDE9BDD18 - c641af1101fb4b89"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ModalStylesDemo.ViewController.presentationController(forPresented: __C.UIViewController, presenting: Swift.Optional&lt;__C.UIViewController&gt;, source: __C.UIViewController) -&gt; Swift.Optional&lt;__C.UIPresentationController&gt;"
-                  moduleName = "ModalStylesDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "112"
-                  endingLineNumber = "112"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "6F774390-8DB7-42DC-8DCB-E43FDE9BDD18 - c641af1101fb482c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ModalStylesDemo.ViewController.presentationController(forPresented: __C.UIViewController, presenting: Swift.Optional&lt;__C.UIViewController&gt;, source: __C.UIViewController) -&gt; Swift.Optional&lt;__C.UIPresentationController&gt;"
-                  moduleName = "ModalStylesDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

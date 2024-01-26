@@ -17,6 +17,10 @@
 		E97BE99D2B639FDF00BD0642 /* SecondNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */; };
 		E97BE9B12B63BF8100BD0642 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E97BE9B02B63BF8100BD0642 /* SnapKit */; };
 		E97BE9B32B63BF8100BD0642 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E97BE9B22B63BF8100BD0642 /* SnapKit-Dynamic */; };
+		E97BE9B62B63E55E00BD0642 /* DFFloatingPanelNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE9B52B63E55E00BD0642 /* DFFloatingPanelNavBar.swift */; };
+		E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */; };
+		E98871132B64247E00D005F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98871122B64247E00D005F5 /* BaseView.swift */; };
+		E98871152B6424C600D005F5 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98871142B6424C600D005F5 /* BaseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		687149AB2342CDA10021C96B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		E97BE99A2B639D3400BD0642 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNewController.swift; sourceTree = "<group>"; };
+		E97BE9B52B63E55E00BD0642 /* DFFloatingPanelNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFFloatingPanelNavBar.swift; sourceTree = "<group>"; };
+		E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionButton.swift; sourceTree = "<group>"; };
+		E98871122B64247E00D005F5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		E98871142B6424C600D005F5 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 				687149932342B54B0021C96B /* AppDelegate.swift */,
 				687149972342B54B0021C96B /* ViewController.swift */,
 				687149AB2342CDA10021C96B /* NewViewController.swift */,
+				E97BE9B42B63E55900BD0642 /* Helpers */,
 				E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */,
 				687149952342B54B0021C96B /* SceneDelegate.swift */,
 				E97BE99A2B639D3400BD0642 /* PresentationController.swift */,
@@ -77,6 +86,17 @@
 				6871499E2342B54C0021C96B /* LaunchScreen.storyboard */,
 			);
 			path = ModalStylesDemo;
+			sourceTree = "<group>";
+		};
+		E97BE9B42B63E55900BD0642 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E97BE9B52B63E55E00BD0642 /* DFFloatingPanelNavBar.swift */,
+				E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */,
+				E98871122B64247E00D005F5 /* BaseView.swift */,
+				E98871142B6424C600D005F5 /* BaseButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +178,13 @@
 			files = (
 				687149982342B54B0021C96B /* ViewController.swift in Sources */,
 				E97BE99D2B639FDF00BD0642 /* SecondNewController.swift in Sources */,
+				E97BE9B62B63E55E00BD0642 /* DFFloatingPanelNavBar.swift in Sources */,
 				E97BE99B2B639D3400BD0642 /* PresentationController.swift in Sources */,
 				687149AC2342CDA10021C96B /* NewViewController.swift in Sources */,
 				687149942342B54B0021C96B /* AppDelegate.swift in Sources */,
+				E98871152B6424C600D005F5 /* BaseButton.swift in Sources */,
+				E98871132B64247E00D005F5 /* BaseView.swift in Sources */,
+				E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */,
 				687149962342B54B0021C96B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

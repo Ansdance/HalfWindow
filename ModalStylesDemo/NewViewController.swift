@@ -2,8 +2,8 @@
 //  NewViewController.swift
 //  ModalStylesDemo
 //
-//  Created by Russell Archer on 01/10/2019.
-//  Copyright © 2019 Russell Archer. All rights reserved.
+//  Created by ANSAR DAULETBAYEV on 26.01.2024.
+//  Copyright © 2024 ANSAR DAULETBAYEV. All rights reserved.
 //
 
 import UIKit
@@ -11,33 +11,65 @@ import SnapKit
 
 class NewViewController: UIViewController {
     
-    lazy var registerButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Next222 Page", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = view.tintColor
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        return button
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
     }()
     
+    private lazy var navigationView: DFFloatingPanelNavBar = {
+        let view = DFFloatingPanelNavBar()
+        view.navigationTitle = "Create document"
+        return view
+    }()
+     
+    private lazy var customButton: UIView = {
+        return CustomActionButton()//(title: "Upload Document")
+    }()
+    
+    private lazy var secondButton: UIView = {
+        return CustomActionButton()//(title: "Upload Document")
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupViews()
         setupConstraints()
-        registerButton.addTarget(self, action: #selector(pushViewControllerTapped), for: .touchUpInside)
     }
     
-    func setupView() {
-        view.backgroundColor = .clear
+    func setupViews() {
+        view.addSubview(containerView)
+        
+        containerView.addSubview(navigationView)
+        containerView.addSubview(customButton)
+        containerView.addSubview(secondButton)
     }
     
     func setupConstraints() {
-        view.addSubview(registerButton)
-       
-        registerButton.snp.makeConstraints { make in
+
+        containerView.snp.makeConstraints { make in
             make.top.bottom.leading.trailing.equalToSuperview()
         }
+        
+        navigationView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
+            make.height.equalTo(54)
+        }
+        
+        customButton.snp.makeConstraints { make in
+            make.top.equalTo(navigationView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(16)
+            
+            make.height.equalTo(54)
+        }
+        
+        secondButton.snp.makeConstraints { make in
+            make.top.equalTo(customButton.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(16)
+            
+            make.height.equalTo(54)
+        }
+        
     }
     
     
@@ -48,3 +80,8 @@ class NewViewController: UIViewController {
     }
 }
    
+extension NewViewController: ActionsDelegate {
+    func createCard() {
+//        viewModel.mutate(.generateCard)
+    }
+}
