@@ -1,10 +1,5 @@
 #  presentViewController vs pushViewController
 
-Exploring the differences between presentViewController and pushViewController with new iOS 13 modal presentation styles.
-
-![](./readme-assets/img1.gif)
-
-___
 
 With **presentViewController** the new view controller is presented **modally**, “on top” of the existing view controller.
 With **pushViewController** the new view controller is pushed onto the existing **navigation stack**.
