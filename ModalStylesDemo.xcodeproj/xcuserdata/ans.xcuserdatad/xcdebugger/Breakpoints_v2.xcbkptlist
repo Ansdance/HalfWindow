@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F774390-8DB7-42DC-8DCB-E43FDE9BDD18"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ModalStylesDemo/ViewController.swift"
@@ -66,6 +66,133 @@
             endingLineNumber = "62"
             landmarkName = "presentationController(forPresented:presenting:source:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "841F7F6A-294B-46B5-BAD7-CB55D1967C31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModalStylesDemo/Helpers/CustomActionButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "addDocumentButtonDidTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA29DC14-E086-4DA5-AA6B-F739CB67BDBC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModalStylesDemo/Helpers/CustomActionButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "createButton"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2344123A-ADEA-4EF8-B407-EEE28C2A36DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModalStylesDemo/Helpers/CustomActionButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "addDocumentButtonDidTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9219DCB6-FA6C-48C0-90E7-C670138F4FB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModalStylesDemo/Helpers/DFFloatingPanelNavBar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "dissmissBack()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2924D7F-020B-479F-85B6-6175D1078872"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ModalStylesDemo/SecondNewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "dismissBack()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E2924D7F-020B-479F-85B6-6175D1078872 - 59622a82496c10a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ModalStylesDemo.SecondNewController.dismissBack() -&gt; ()"
+                  moduleName = "ModalStylesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/SecondNewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "E2924D7F-020B-479F-85B6-6175D1078872 - 59622a82496c10f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ModalStylesDemo.SecondNewController.dismissBack() -&gt; ()"
+                  moduleName = "ModalStylesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/SecondNewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "E2924D7F-020B-479F-85B6-6175D1078872 - 59622a82496c11a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ModalStylesDemo.SecondNewController.dismissBack() -&gt; ()"
+                  moduleName = "ModalStylesDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/SecondNewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,25 +1,17 @@
 //
-//  DFFloatingPanelNavBar.swift
+//  DFFloatingPanelNavBarDddd.swift
 //  ModalStylesDemo
 //
-//  Created by ANSAR DAULETBAYEV on 26.01.2024.
-//  Copyright © 2024 ANSAR DAULETBAYEV. All rights reserved.
+//  Created by ANSAR DAULETBAYEV on 28.01.2024.
+//  Copyright © 2024 Russell Archer. All rights reserved.
 //
 
 import UIKit
 
-final class DFFloatingPanelNavBar: UIView {
+final class DFFloatingPanelNavBarDddd: UIView {
 
     var dismiss: (() -> (Void))?
 
-    private lazy var sliderView: UIView = {
-        let view = UIView()
-        view.alpha = 0.24
-        view.layer.backgroundColor = UIColor.gray.cgColor
-        view.layer.cornerRadius = 4
-        return view
-    }()
-    //Create document
     private lazy var backIconImageView: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
@@ -46,18 +38,12 @@ final class DFFloatingPanelNavBar: UIView {
     }
     
     private func setupViews() {
-        addSubview(sliderView)
+        
         addSubview(backIconImageView)
     }
     
     private func makeConstraints() {
 
-        sliderView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(6)
-            make.centerX.equalToSuperview()
-            make.width.equalTo(40)
-            make.height.equalTo(4)
-        }
         
         backIconImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(30)

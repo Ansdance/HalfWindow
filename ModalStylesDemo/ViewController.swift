@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @objc func presentModalController() {
         let vc = NewViewController()
         
-        vc.transitioningDelegate = self
+//        vc.transitioningDelegate = self
         
         let newNavigationController = UINavigationController(rootViewController: vc)
         newNavigationController.transitioningDelegate = self

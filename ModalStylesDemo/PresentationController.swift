@@ -21,7 +21,7 @@ import UIKit
 class PresentationController: UIPresentationController {
     override var frameOfPresentedViewInContainerView: CGRect {
         let bounds = containerView!.bounds
-        let height: CGFloat = 300
+        let height: CGFloat = 226
         return CGRect(x: 0,
                       y: bounds.height - height,
                       width: bounds.width,

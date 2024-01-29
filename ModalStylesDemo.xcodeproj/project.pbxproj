@@ -13,6 +13,10 @@
 		6871499D2342B54C0021C96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6871499C2342B54C0021C96B /* Assets.xcassets */; };
 		687149A02342B54C0021C96B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6871499E2342B54C0021C96B /* LaunchScreen.storyboard */; };
 		687149AC2342CDA10021C96B /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687149AB2342CDA10021C96B /* NewViewController.swift */; };
+		E95617C52B66C156009BC840 /* Extesion + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95617C42B66C156009BC840 /* Extesion + UIViewController.swift */; };
+		E95617C72B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95617C62B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift */; };
+		E95617C92B676E67009BC840 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95617C82B676E67009BC840 /* NavBar.swift */; };
+		E95617CB2B67809F009BC840 /* NavAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95617CA2B67809F009BC840 /* NavAppearence.swift */; };
 		E97BE99B2B639D3400BD0642 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE99A2B639D3400BD0642 /* PresentationController.swift */; };
 		E97BE99D2B639FDF00BD0642 /* SecondNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */; };
 		E97BE9B12B63BF8100BD0642 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E97BE9B02B63BF8100BD0642 /* SnapKit */; };
@@ -33,6 +37,10 @@
 		687149A12342B54C0021C96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		687149A72342B5590021C96B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		687149AB2342CDA10021C96B /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		E95617C42B66C156009BC840 /* Extesion + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extesion + UIViewController.swift"; sourceTree = "<group>"; };
+		E95617C62B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFFloatingPanelNavBarDddd.swift; sourceTree = "<group>"; };
+		E95617C82B676E67009BC840 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		E95617CA2B67809F009BC840 /* NavAppearence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAppearence.swift; sourceTree = "<group>"; };
 		E97BE99A2B639D3400BD0642 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNewController.swift; sourceTree = "<group>"; };
 		E97BE9B52B63E55E00BD0642 /* DFFloatingPanelNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFFloatingPanelNavBar.swift; sourceTree = "<group>"; };
@@ -78,8 +86,8 @@
 				687149932342B54B0021C96B /* AppDelegate.swift */,
 				687149972342B54B0021C96B /* ViewController.swift */,
 				687149AB2342CDA10021C96B /* NewViewController.swift */,
-				E97BE9B42B63E55900BD0642 /* Helpers */,
 				E97BE99C2B639FDF00BD0642 /* SecondNewController.swift */,
+				E97BE9B42B63E55900BD0642 /* Helpers */,
 				687149952342B54B0021C96B /* SceneDelegate.swift */,
 				E97BE99A2B639D3400BD0642 /* PresentationController.swift */,
 				6871499C2342B54C0021C96B /* Assets.xcassets */,
@@ -92,9 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				E97BE9B52B63E55E00BD0642 /* DFFloatingPanelNavBar.swift */,
+				E95617C62B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift */,
 				E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */,
 				E98871122B64247E00D005F5 /* BaseView.swift */,
 				E98871142B6424C600D005F5 /* BaseButton.swift */,
+				E95617C42B66C156009BC840 /* Extesion + UIViewController.swift */,
+				E95617C82B676E67009BC840 /* NavBar.swift */,
+				E95617CA2B67809F009BC840 /* NavAppearence.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -182,9 +194,13 @@
 				E97BE99B2B639D3400BD0642 /* PresentationController.swift in Sources */,
 				687149AC2342CDA10021C96B /* NewViewController.swift in Sources */,
 				687149942342B54B0021C96B /* AppDelegate.swift in Sources */,
+				E95617C52B66C156009BC840 /* Extesion + UIViewController.swift in Sources */,
+				E95617CB2B67809F009BC840 /* NavAppearence.swift in Sources */,
 				E98871152B6424C600D005F5 /* BaseButton.swift in Sources */,
+				E95617C92B676E67009BC840 /* NavBar.swift in Sources */,
 				E98871132B64247E00D005F5 /* BaseView.swift in Sources */,
 				E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */,
+				E95617C72B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift in Sources */,
 				687149962342B54B0021C96B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
