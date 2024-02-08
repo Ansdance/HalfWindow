@@ -25,6 +25,10 @@
 		E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */; };
 		E98871132B64247E00D005F5 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98871122B64247E00D005F5 /* BaseView.swift */; };
 		E98871152B6424C600D005F5 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98871142B6424C600D005F5 /* BaseButton.swift */; };
+		E9CAEBA22B73D76300915EE8 /* TaskEmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBA12B73D76300915EE8 /* TaskEmployeeModel.swift */; };
+		E9CAEBA42B73E8BB00915EE8 /* UIView+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */; };
+		E9CAEBA62B73E94900915EE8 /* BottomsheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */; };
+		E9CAEBFE2B74A77500915EE8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9CAEBFD2B74A77500915EE8 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,9 @@
 		E97BE9B72B63E92200BD0642 /* CustomActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionButton.swift; sourceTree = "<group>"; };
 		E98871122B64247E00D005F5 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E98871142B6424C600D005F5 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		E9CAEBA12B73D76300915EE8 /* TaskEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmployeeModel.swift; sourceTree = "<group>"; };
+		E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layouts.swift"; sourceTree = "<group>"; };
+		E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomsheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAEBFE2B74A77500915EE8 /* Kingfisher in Frameworks */,
 				E97BE9B12B63BF8100BD0642 /* SnapKit in Frameworks */,
 				E97BE9B32B63BF8100BD0642 /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -82,6 +90,7 @@
 		687149922342B54B0021C96B /* ModalStylesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E9CAEBA02B73D75E00915EE8 /* New Group */,
 				687149A12342B54C0021C96B /* Info.plist */,
 				687149932342B54B0021C96B /* AppDelegate.swift */,
 				687149972342B54B0021C96B /* ViewController.swift */,
@@ -111,6 +120,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E9CAEBA02B73D75E00915EE8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAEBA12B73D76300915EE8 /* TaskEmployeeModel.swift */,
+				E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */,
+				E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +149,7 @@
 			packageProductDependencies = (
 				E97BE9B02B63BF8100BD0642 /* SnapKit */,
 				E97BE9B22B63BF8100BD0642 /* SnapKit-Dynamic */,
+				E9CAEBFD2B74A77500915EE8 /* Kingfisher */,
 			);
 			productName = ModalStylesDemo;
 			productReference = 687149902342B54B0021C96B /* ModalStylesDemo.app */;
@@ -161,6 +181,7 @@
 			mainGroup = 687149872342B54B0021C96B;
 			packageReferences = (
 				E97BE9AF2B63BF8100BD0642 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E9CAEBFC2B74A77500915EE8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 687149912342B54B0021C96B /* Products */;
 			projectDirPath = "";
@@ -192,6 +213,8 @@
 				E97BE99D2B639FDF00BD0642 /* SecondNewController.swift in Sources */,
 				E97BE9B62B63E55E00BD0642 /* DFFloatingPanelNavBar.swift in Sources */,
 				E97BE99B2B639D3400BD0642 /* PresentationController.swift in Sources */,
+				E9CAEBA42B73E8BB00915EE8 /* UIView+Layouts.swift in Sources */,
+				E9CAEBA62B73E94900915EE8 /* BottomsheetViewController.swift in Sources */,
 				687149AC2342CDA10021C96B /* NewViewController.swift in Sources */,
 				687149942342B54B0021C96B /* AppDelegate.swift in Sources */,
 				E95617C52B66C156009BC840 /* Extesion + UIViewController.swift in Sources */,
@@ -201,6 +224,7 @@
 				E98871132B64247E00D005F5 /* BaseView.swift in Sources */,
 				E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */,
 				E95617C72B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift in Sources */,
+				E9CAEBA22B73D76300915EE8 /* TaskEmployeeModel.swift in Sources */,
 				687149962342B54B0021C96B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +425,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		E9CAEBFC2B74A77500915EE8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -413,6 +445,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E97BE9AF2B63BF8100BD0642 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		E9CAEBFD2B74A77500915EE8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9CAEBFC2B74A77500915EE8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
