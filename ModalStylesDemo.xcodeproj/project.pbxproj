@@ -29,6 +29,8 @@
 		E9CAEBA42B73E8BB00915EE8 /* UIView+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */; };
 		E9CAEBA62B73E94900915EE8 /* BottomsheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */; };
 		E9CAEBFE2B74A77500915EE8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9CAEBFD2B74A77500915EE8 /* Kingfisher */; };
+		E9CAEC002B74D45E00915EE8 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBFF2B74D45E00915EE8 /* EmployeeTableViewCell.swift */; };
+		E9CAEC022B74D75400915EE8 /* TaskEmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		E9CAEBA12B73D76300915EE8 /* TaskEmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmployeeModel.swift; sourceTree = "<group>"; };
 		E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layouts.swift"; sourceTree = "<group>"; };
 		E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomsheetViewController.swift; sourceTree = "<group>"; };
+		E9CAEBFF2B74D45E00915EE8 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				E9CAEBA12B73D76300915EE8 /* TaskEmployeeModel.swift */,
 				E9CAEBA32B73E8BB00915EE8 /* UIView+Layouts.swift */,
 				E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */,
+				E9CAEBFF2B74D45E00915EE8 /* EmployeeTableViewCell.swift */,
+				E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -209,11 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAEC022B74D75400915EE8 /* TaskEmployeeTableViewCell.swift in Sources */,
 				687149982342B54B0021C96B /* ViewController.swift in Sources */,
 				E97BE99D2B639FDF00BD0642 /* SecondNewController.swift in Sources */,
 				E97BE9B62B63E55E00BD0642 /* DFFloatingPanelNavBar.swift in Sources */,
 				E97BE99B2B639D3400BD0642 /* PresentationController.swift in Sources */,
 				E9CAEBA42B73E8BB00915EE8 /* UIView+Layouts.swift in Sources */,
+				E9CAEC002B74D45E00915EE8 /* EmployeeTableViewCell.swift in Sources */,
 				E9CAEBA62B73E94900915EE8 /* BottomsheetViewController.swift in Sources */,
 				687149AC2342CDA10021C96B /* NewViewController.swift in Sources */,
 				687149942342B54B0021C96B /* AppDelegate.swift in Sources */,

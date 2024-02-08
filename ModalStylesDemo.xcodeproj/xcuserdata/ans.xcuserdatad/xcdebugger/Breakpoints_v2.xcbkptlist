@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6F774390-8DB7-42DC-8DCB-E43FDE9BDD18"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ModalStylesDemo/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "ViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "841F7F6A-294B-46B5-BAD7-CB55D1967C31"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -150,64 +134,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "13BEC362-0711-4ED2-AB13-7B5CE475559B"
+            uuid = "681661B7-386D-4CCA-BD99-29FF35A6E87E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ModalStylesDemo/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "fullName"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "13BEC362-0711-4ED2-AB13-7B5CE475559B - d037250c7496573f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ModalStylesDemo.FilterInitiatorModel.fullName.getter : Swift.String"
-                  moduleName = "ModalStylesDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "13BEC362-0711-4ED2-AB13-7B5CE475559B - d037250c7496573f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ModalStylesDemo.FilterInitiatorModel.fullName.getter : Swift.String"
-                  moduleName = "ModalStylesDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ans/Documents/Projects/IOSnew/downloaded/ModalStylesDemo/ModalStylesDemo/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "188">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4BF0DA3C-F718-44EA-974E-11FDEF4B51F5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ModalStylesDemo/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "configure(with:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -10,62 +10,10 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    //    lazy var registerButton: UIButton = {
-    //        let button = UIButton()
-    //        button.setTitle("Next Page", for: .normal)
-    //        button.setTitleColor(.white, for: .normal)
-    //        button.backgroundColor = view.tintColor
-    //        button.layer.cornerRadius = 8
-    //        button.clipsToBounds = true
-    //        return button
-    //    }()
-    //
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        setupView()
-    //        setupConstraints()
-    //        registerButton.addTarget(self, action: #selector(presentModalController), for: .touchUpInside)
-    //    }
-    //
-    //    func setupView() {
-    //        view.backgroundColor = .white
-    //    }
-    //
-    //    func setupConstraints() {
-    //        view.addSubview(registerButton)
-    //
-    //        registerButton.snp.makeConstraints { make in
-    //            make.centerX.equalToSuperview()
-    //            make.centerY.equalToSuperview()
-    //            make.width.equalTo(200)
-    //            make.height.equalTo(50)
-    //        }
-    //    }
-    //
-    //    @objc func presentModalController() {
-    //        let vc = NewViewController()
-    //
-    //        let newNavigationController = UINavigationController(rootViewController: vc)
-    //        newNavigationController.transitioningDelegate = self
-    //        newNavigationController.modalPresentationStyle = .custom
-    //        present(newNavigationController, animated: true, completion: nil)
-    //
-    //    }
-    //}
-    //
-    //
-    //extension ViewController: UIViewControllerTransitioningDelegate {
-    //    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-    //        return PresentationController(presentedViewController: presented, presenting: presenting)
-    //    }
-    //}
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var initiators: [TaskEmployeeModel] = []
-    
-    
-    // UI Components
+   
     let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -103,20 +51,68 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InitiatorCell", for: indexPath) as! InitiatorCell
-           let initiator = initiators[indexPath.row]
+        let initiator = initiators[indexPath.row]
+        cell.configure(with: initiator)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var selectedInitiator = initiators[indexPath.row]
            
-           // Установите обработчик выбора для ячейки
-           cell.selectHandler = { [weak self] in
-               // Измените выбор модели при нажатии на изображение
-               self?.initiators[indexPath.row].selected = !(self?.initiators[indexPath.row].selected ?? false)
-               // Перезагрузите таблицу для обновления внешнего вида
-               self?.tableView.reloadData()
+           // Затем проверим, имеет ли он уже какое-то значение selected
+           if var currentSelected = selectedInitiator.selected {
+               // Если текущее значение опциональное, переключаем его
+               currentSelected.toggle()
+               selectedInitiator.selected = currentSelected
            }
            
-           cell.configure(with: initiator)
-           return cell
-       }
+           // Заменяем исходный элемент в массиве обновленным
+           initiators[indexPath.row] = selectedInitiator
+           
+           // После того, как обновили данные в массиве, перезагружаем ячейку
+           tableView.reloadRows(at: [indexPath], with: .none)
+        
+//        var selectedInitiator = initiators[indexPath.row]
+//               
+//            // Затем проверим, имеет ли он уже какое-то значение selected
+//            if var currentSelected = selectedInitiator.selected {
+//                // Если текущее значение опциональное, переключаем его
+//                currentSelected.toggle()
+//                selectedInitiator.selected = currentSelected
+//            }
+//               
+//            // Заменяем исходный элемент в массиве обновленным
+//            initiators[indexPath.row] = selectedInitiator
+//            
+//            // Перемещаем выбранный инициатор наверх списка
+//            moveSelectedInitiatorToTop(selectedInitiator)
+    }
     
+    private func moveSelectedInitiatorToTop(_ initiator: TaskEmployeeModel) {
+        // Удаляем выбранный инициатор из массива
+            initiators.removeAll { $0.id == initiator.id }
+            
+            // Вставляем его в начало массива, чтобы он был первым
+            initiators.insert(initiator, at: 0)
+            
+            // Сортируем массив, чтобы все элементы с true были вверху
+            initiators.sort { (first, second) in
+                if let firstSelected = first.selected, let secondSelected = second.selected {
+                    // Если оба элемента имеют значение selected, сортируем по этому значению
+                    return firstSelected && !secondSelected
+                } else if first.selected != nil {
+                    // Если только первый элемент имеет значение selected, помещаем его вперед
+                    return true
+                } else {
+                    // Если только второй элемент имеет значение selected, помещаем его вперед
+                    return false
+                }
+            }
+            
+            // Обновляем таблицу
+            tableView.reloadData()
+    }
+
     
     private func fetchDataFromAPI() {
         guard let url = URL(string: "https://dms.dar-dev.zone/api/v1/route-api/hcms/employees/company?companyId=655b7bfb-ff67-4a81-a48f-89c054f188b7") else {
@@ -142,11 +138,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             if let data = data {
                 do {
-                    let decodedData = try JSONDecoder().decode([TaskEmployeeModel].self, from: data)
+                    var decodedData = try JSONDecoder().decode([TaskEmployeeModel].self, from: data)
+                    decodedData = decodedData.map { employee in
+                        var employeeCopy = employee
+                        if employeeCopy.selected == nil {
+                            employeeCopy.selected = false
+                        }
+                        return employeeCopy
+                    }
+                    
+                    decodedData.sort { $0.displayName ?? "" < $1.displayName ?? "" }
+                    
                     DispatchQueue.main.async {
                         self.initiators = decodedData
                         self.tableView.reloadData()
                     }
+                    
                 } catch {
                     print("Ошибка декодирования JSON: \(error)")
                 }
@@ -158,7 +165,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 }
 
 class InitiatorCell: UITableViewCell {
-    var selectHandler: (() -> Void)?
     
     private lazy var iconImageView: UIImageView = {
         let view = UIImageView()
@@ -191,15 +197,6 @@ class InitiatorCell: UITableViewCell {
         
         setupUI()
         setupConstraints()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(iconTapped))
-        iconImageView.isUserInteractionEnabled = true
-        iconImageView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc private func iconTapped() {
-        // Вызовите замыкание обработчика выбора
-        selectHandler?()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -252,27 +249,6 @@ class InitiatorCell: UITableViewCell {
         } else {
             iconImageView.image = UIImage(named: "unchekIcon")
         }
-    }
-}
-
-
-struct FilterInitiatorModel: Equatable {
-    var id: String?
-    var firstName: String?
-    var lastName: String?
-    var companyID: String?
-    var position: String?
-    var avatar: String?
-    var isSelected: Bool = false
-    
-    var fullName: String {
-        if let firstName = firstName {
-            if let lastName = lastName {
-                return "\(String(describing: firstName)) \(String(describing: lastName))"
-            }
-            return "\(String(describing: firstName))"
-        }
-        return ""
     }
 }
 
