@@ -31,6 +31,8 @@
 		E9CAEBFE2B74A77500915EE8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E9CAEBFD2B74A77500915EE8 /* Kingfisher */; };
 		E9CAEC002B74D45E00915EE8 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEBFF2B74D45E00915EE8 /* EmployeeTableViewCell.swift */; };
 		E9CAEC022B74D75400915EE8 /* TaskEmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */; };
+		E9CAEC202B7B89C500915EE8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEC1F2B7B89C500915EE8 /* FirstViewController.swift */; };
+		E9CAEC232B7B8A0100915EE8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAEC222B7B8A0100915EE8 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		E9CAEBA52B73E94900915EE8 /* BottomsheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomsheetViewController.swift; sourceTree = "<group>"; };
 		E9CAEBFF2B74D45E00915EE8 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 		E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		E9CAEC1F2B7B89C500915EE8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		E9CAEC222B7B8A0100915EE8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		687149922342B54B0021C96B /* ModalStylesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E9CAEC212B7B89CD00915EE8 /* 2 screens */,
 				E9CAEBA02B73D75E00915EE8 /* New Group */,
 				687149A12342B54C0021C96B /* Info.plist */,
 				687149932342B54B0021C96B /* AppDelegate.swift */,
@@ -134,6 +139,15 @@
 				E9CAEC012B74D75400915EE8 /* TaskEmployeeTableViewCell.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E9CAEC212B7B89CD00915EE8 /* 2 screens */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAEC1F2B7B89C500915EE8 /* FirstViewController.swift */,
+				E9CAEC222B7B8A0100915EE8 /* SecondViewController.swift */,
+			);
+			path = "2 screens";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,8 +244,10 @@
 				E98871152B6424C600D005F5 /* BaseButton.swift in Sources */,
 				E95617C92B676E67009BC840 /* NavBar.swift in Sources */,
 				E98871132B64247E00D005F5 /* BaseView.swift in Sources */,
+				E9CAEC202B7B89C500915EE8 /* FirstViewController.swift in Sources */,
 				E97BE9B82B63E92200BD0642 /* CustomActionButton.swift in Sources */,
 				E95617C72B66CC07009BC840 /* DFFloatingPanelNavBarDddd.swift in Sources */,
+				E9CAEC232B7B8A0100915EE8 /* SecondViewController.swift in Sources */,
 				E9CAEBA22B73D76300915EE8 /* TaskEmployeeModel.swift in Sources */,
 				687149962342B54B0021C96B /* SceneDelegate.swift in Sources */,
 			);

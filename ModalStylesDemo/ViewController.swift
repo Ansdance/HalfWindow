@@ -14,6 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var initiators: [TaskEmployeeModel] = []
    
+    var selectedInitiators: [TaskEmployeeModel] = []
+    var unselectedInitiators: [TaskEmployeeModel] = []
+    
     let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -44,9 +47,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: - UITableViewDataSource
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            if section == 0 {
+                return "Selected"
+            } else {
+                return "Unselected"
+            }
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return initiators.count
+        if section == 0 {
+            return selectedInitiators.count
+        } else {
+            return unselectedInitiators.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,57 +77,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var selectedInitiator = initiators[indexPath.row]
            
-           // Затем проверим, имеет ли он уже какое-то значение selected
            if var currentSelected = selectedInitiator.selected {
-               // Если текущее значение опциональное, переключаем его
                currentSelected.toggle()
                selectedInitiator.selected = currentSelected
            }
            
-           // Заменяем исходный элемент в массиве обновленным
            initiators[indexPath.row] = selectedInitiator
            
-           // После того, как обновили данные в массиве, перезагружаем ячейку
            tableView.reloadRows(at: [indexPath], with: .none)
         
 //        var selectedInitiator = initiators[indexPath.row]
-//               
-//            // Затем проверим, имеет ли он уже какое-то значение selected
+//
 //            if var currentSelected = selectedInitiator.selected {
-//                // Если текущее значение опциональное, переключаем его
 //                currentSelected.toggle()
 //                selectedInitiator.selected = currentSelected
 //            }
-//               
-//            // Заменяем исходный элемент в массиве обновленным
+//
 //            initiators[indexPath.row] = selectedInitiator
-//            
-//            // Перемещаем выбранный инициатор наверх списка
+//
 //            moveSelectedInitiatorToTop(selectedInitiator)
     }
     
     private func moveSelectedInitiatorToTop(_ initiator: TaskEmployeeModel) {
-        // Удаляем выбранный инициатор из массива
             initiators.removeAll { $0.id == initiator.id }
-            
-            // Вставляем его в начало массива, чтобы он был первым
+          
             initiators.insert(initiator, at: 0)
             
-            // Сортируем массив, чтобы все элементы с true были вверху
             initiators.sort { (first, second) in
                 if let firstSelected = first.selected, let secondSelected = second.selected {
-                    // Если оба элемента имеют значение selected, сортируем по этому значению
+                   
                     return firstSelected && !secondSelected
                 } else if first.selected != nil {
-                    // Если только первый элемент имеет значение selected, помещаем его вперед
+                  
                     return true
                 } else {
-                    // Если только второй элемент имеет значение selected, помещаем его вперед
+                   
                     return false
                 }
             }
             
-            // Обновляем таблицу
             tableView.reloadData()
     }
 
@@ -151,6 +157,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     DispatchQueue.main.async {
                         self.initiators = decodedData
+                        self.selectedInitiators = self.initiators.filter { $0.selected == true }
+                        self.unselectedInitiators = self.initiators.filter { $0.selected == false }
                         self.tableView.reloadData()
                     }
                     
